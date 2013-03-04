@@ -1,7 +1,7 @@
 {
-  "name": "front-end-project-template",
+  "name": "RockArt",
   "version": "0.0.0",
-  "description": "Template repository for front-end projects",
+  "description": "Rock Art Mine Maps",
   "main": "server.js",
   "devDependencies": {
     "grunt": "~0.4.0",
