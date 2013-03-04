@@ -9,15 +9,32 @@
 @media only screen and (max-width: 950px) {
   #slider-container {
     .slider-side {
+      img.map {
+          margin-top: 70px;
+        }
       &.left {
         h2 {
-          top:30px;
+            top:20px;
+            width: 240px;
+            margin-left: 0;
           }
       }
       &.right {
         .mines-overlay {
-          top:30px;
+          top:20px;
+          width: 240px;
+          text-align: right;
+          h2 {
+            margin-right: 0;
           }
+        }
+      }
+    }
+
+    .slider-overlay {
+      .rock-art-regions-title {
+        left:20px;
+        top: 80%;
       }
     }
   }
