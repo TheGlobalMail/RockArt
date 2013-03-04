@@ -22,7 +22,8 @@
     },
 
     updateHandlePosition: function() {
-      this.$handle.css('left', this.$left.css('width'));
+      var offsetPercentage = (this.$left.width() / this.$el.width()) * 100;
+      this.$handle.css('left', offsetPercentage + '%');
     },
 
     updateSliderInnerWidths: function() {
@@ -53,7 +54,8 @@
     },
 
     setDividerPosition: function(x) {
-      this.$left.width(x);
+      var offsetPercentage = (x / this.$el.width()) * 100;
+      this.$left.width(offsetPercentage + '%');
       this.refresh();
     },
 
