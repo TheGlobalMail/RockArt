@@ -19,15 +19,51 @@
     bottom: 0;
     overflow: hidden;
 
+    h2 {
+      text-transform: uppercase;
+      position: absolute;
+      width: 140px;
+      font-style: italic;
+      font-weight: 700;
+      .font-size(24);
+      line-height: .9;
+      }
+
+
+
     &.left {
       background-color: #82b4d6;
       z-index: 2;
       width: 65%;
+      .box-shadow(0 0 12px rgba(0,0,0,0.5),1px 0 0 rgba(0,0,0,0.2));
+      border-right: 1px solid rgba(255,255,255,0.1);
+
+      h2 {
+        top: 90px;
+        left: 5%;
+        color: white;
+      }
     }
 
     &.right {
       background-color: #e5e5e5;
       z-index: 1;
+
+      h2 {
+        top: 90px;
+        right: 5%;
+        .opacity(40);
+      }
+
+      h3 {
+        .font-size(11);
+        font-style: italic;
+        position: absolute;
+        width: 140px;
+        top: 160px;
+        right: 5%;
+        .opacity(40);
+    }
     }
   }
 
@@ -47,6 +83,7 @@
     background-color: orange;
     .border-radius(999px);
     border: 2px solid #fff;
+    .box-shadow(0 2px 8px rgba(0,0,0,0.6));
   }
 
   .slider-overlay {
@@ -56,6 +93,17 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    h2 {
+      position: absolute;
+      left:5%;
+      top: 80%;
+      .font-size(70);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: -.08em;
+    }
 
     .map-legend {
       position: absolute;
