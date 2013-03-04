@@ -18,7 +18,7 @@
       this.$handle = this.$('.slider-handle');
       this.$inners = this.$('.slider-side-inner');
 
-      $(window).on('resize', this.refresh);
+      $(window).on('resize', this.updateSliderInnerWidths);
 
       this.refresh();
     },
