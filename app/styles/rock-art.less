@@ -27,15 +27,17 @@
       font-weight: 700;
       .font-size(24);
       line-height: .9;
-      }
-
-
+    }
 
     &.left {
       background-color: #82b4d6;
       z-index: 2;
       width: 65%;
       .box-shadow(0 0 12px rgba(0,0,0,0.5),1px 0 0 rgba(0,0,0,0.2));
+
+      .slider-content {
+        position: absolute;
+      }
 
       h2 {
         top: 90px;
@@ -62,7 +64,7 @@
         top: 160px;
         right: 5%;
         .opacity(30);
-    }
+      }
     }
   }
 
@@ -93,16 +95,19 @@
     right: 0;
     bottom: 0;
 
+    .row {
+      position: relative;
+    }
+
     .rock-art-regions-title {
       color: black;
       height: 20%;
       position: absolute;
-      left:5%;
-      top: 75%;
+      left: 5%;
+      bottom: 75%;
       .opacity(80);
 
       h2.rock-art-regions-heading {
-
         .font-size(70);
         font-weight: 800;
         text-transform: uppercase;
