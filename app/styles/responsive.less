@@ -26,6 +26,10 @@
           text-align: right;
           h2 {
             margin-right: 0;
+            margin-bottom: 5px;
+          }
+          h3 {
+            margin-top: 0;
           }
         }
       }
@@ -33,7 +37,7 @@
 
     .slider-overlay {
       .rock-art-regions-title {
-        left:20px;
+        // left:20px;
         top: 80%;
       }
     }
@@ -45,7 +49,7 @@
 @media only screen and (max-width: 910px) {
     .navbar {
         &.special-feature {
-          padding: 8px 20px;
+          padding: 8px 0;
           .brand {
             width:195px;
             background-position: 0 center;
@@ -55,7 +59,6 @@
     #slider-container {
       .slider-overlay {
         .rock-art-regions-title {
-
             h2.rock-art-regions-heading {
               .font-size(50);
             }
@@ -71,17 +74,48 @@
 // Phones
 @media only screen and (max-width: 710px) {
     .navbar {
+      &.special-feature {
+        padding: 2px 0;
+      }
       .special-feature-misc {
           display: none;
       }
     }
     #slider-container {
+
+      .slider-side {
+
+        &.left {
+          h2 {
+              .font-size(18);
+              width: 140px;
+              margin-left: 0;
+              left: 20px;
+            }
+        }
+        &.right {
+          .mines-overlay {
+            width: 140px;
+            right: 20px;
+            h2 {
+              .font-size(18);
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
       .slider-overlay {
         .rock-art-regions-title {
           width: auto;
-            text-align: center;
+          left: 0;
+          text-align: center;
             h2.rock-art-regions-heading {
-              .font-size(40);
+              .font-size(34);
+            }
+            h3.rock-art-regions-intro {
+              padding: 0 5%;
+
             }
           }
         }
