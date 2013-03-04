@@ -46,13 +46,13 @@
     }
 
     &.right {
-      background-color: #e5e5e5;
+      background: #e5e5e5 url('/images/mines-bg.png') 0 0 repeat;
       z-index: 1;
 
       h2 {
         top: 90px;
         right: 5%;
-        .opacity(40);
+        .opacity(20);
       }
 
       h3 {
@@ -62,7 +62,7 @@
         width: 140px;
         top: 160px;
         right: 5%;
-        .opacity(40);
+        .opacity(30);
     }
     }
   }
@@ -74,7 +74,7 @@
   .slider-handle {
     position: absolute;
     top: 50%;
-    @radius: 50px;
+    @radius: 49px;
     height: @radius;
     width: @radius;
     margin: (@radius / -2) 0 0 (@radius / -2);
@@ -82,8 +82,8 @@
     cursor: col-resize;
     background-color: orange;
     .border-radius(999px);
-    border: 2px solid #fff;
     .box-shadow(0 2px 8px rgba(0,0,0,0.6));
+    background: url('/images/slider.png') center center no-repeat;
   }
 
   .slider-overlay {
@@ -94,15 +94,26 @@
     right: 0;
     bottom: 0;
 
-    h2 {
+    .rock-art-regions-title {
+      color: black;
+      height: 20%;
       position: absolute;
       left:5%;
-      top: 80%;
-      .font-size(70);
-      font-weight: 800;
-      text-transform: uppercase;
-      font-style: italic;
-      letter-spacing: -.08em;
+      top: 75%;
+      .opacity(80);
+
+      h2.rock-art-regions-heading {
+
+        .font-size(70);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: -.08em;
+      }
+
+      h3.rock-art-regions-intro {
+        .font-size(18);
+      }
     }
 
     .map-legend {
