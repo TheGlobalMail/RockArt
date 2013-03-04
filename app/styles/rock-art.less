@@ -1,14 +1,17 @@
 .navbar {
   background: #1b1b1b;
+
   &.special-feature {
     margin: 0;
   }
 }
 
 #slider-container {
-  width: 100%;
-  position: relative;
-  height: 886px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
   overflow: hidden;
 
   &.unselectable {
@@ -29,9 +32,11 @@
       font-weight: 700;
       .font-size(24);
       line-height: .9;
-      }
+    }
 
-
+    .slider-content {
+      position: relative;
+    }
 
     &.left {
       background-color: #82b4d6;
@@ -56,18 +61,18 @@
         position: absolute;
         width: 140px;
         top: 90px;
-        right: 40px;
+        right: 10px;
 
-          h2 {
-            position: relative;
-            .opacity(20);
-            margin-right: 20px;
-          }
+        h2 {
+          position: relative;
+          .opacity(20);
+          margin-right: 20px;
+        }
 
-          h3 {
-            .font-size(11);
-            .opacity(30);
-          }
+        h3 {
+          .font-size(11);
+          .opacity(30);
+        }
       }
     }
   }
@@ -99,13 +104,17 @@
     right: 0;
     bottom: 0;
 
+    .container {
+      position: relative;
+      height: 100%;
+    }
+
     .rock-art-regions-title {
       color: black;
-      height: 20%;
       position: absolute;
       width: 60%;
-      left:40px;
-      top: 70%;
+      left: 40px;
+      top: 670px;
       .opacity(80);
       text-shadow:0 1px 0 rgba(255,255,255,0.4);
 
