@@ -1,5 +1,9 @@
-.navbar.special-feature {
-  margin: 0;
+.navbar {
+  background: #1b1b1b;
+
+  &.special-feature {
+    margin: 0;
+  }
 }
 
 #slider-container {
@@ -41,8 +45,9 @@
 
       h2 {
         top: 90px;
-        left: 5%;
+        left: 40px;
         color: white;
+        margin-left: 20px;
       }
     }
 
@@ -50,20 +55,22 @@
       background: #e5e5e5 url('/images/mines-bg.png') 0 0 repeat;
       z-index: 1;
 
-      h2 {
-        top: 90px;
-        right: 5%;
-        .opacity(20);
-      }
-
-      h3 {
-        .font-size(11);
-        font-style: italic;
+      .mines-overlay {
         position: absolute;
         width: 140px;
-        top: 160px;
-        right: 5%;
-        .opacity(30);
+        top: 90px;
+        right: 40px;
+
+          h2 {
+            position: relative;
+            .opacity(20);
+            margin-right: 20px;
+          }
+
+          h3 {
+            .font-size(11);
+            .opacity(30);
+          }
       }
     }
   }
@@ -74,7 +81,7 @@
 
   .slider-handle {
     position: absolute;
-    top: 50%;
+    top: 40%;
     @radius: 49px;
     height: @radius;
     width: @radius;
@@ -103,8 +110,8 @@
       color: black;
       height: 20%;
       position: absolute;
-      left: 5%;
-      bottom: 75%;
+      left: 40px;
+      top: 70%;
       .opacity(80);
 
       h2.rock-art-regions-heading {
