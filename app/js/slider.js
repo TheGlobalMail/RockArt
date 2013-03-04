@@ -5,7 +5,9 @@
 
     events: {
       'mousedown .slider-handle': 'onMouseDown',
-      'mouseup': 'onMouseUp'
+      'mouseup': 'onMouseUp',
+      'touchstart .slider-handle': 'onTouchStart',
+      'touchend': 'onTouchEnd'
     },
 
     initialize: function() {
@@ -43,6 +45,30 @@
     onMouseUp: function() {
       this.$el.off('mousemove.slider-move');
       this._enableSelection();
+    },
+
+    onTouchStart: function(e) {
+      if (e.originalEvent.touches.length !== 1) {
+        return true;
+      }
+
+      e.preventDefault();
+      this.$el.on('touchmove.slider-move', this.onTouchMove)
+      return false;
+    },
+
+    onTouchMove: function(e) {
+      if (e.originalEvent.changedTouches.length !== 1) {
+        return true;
+      }
+
+      e.preventDefault();
+      var touch = e.originalEvent.changedTouches[0];
+      this.setDividerPosition(touch.pageX);
+    },
+
+    onTouchEnd: function() {
+      this.$el.off('touchmove.slider-move');
     },
 
     _disableSelection: function() {
