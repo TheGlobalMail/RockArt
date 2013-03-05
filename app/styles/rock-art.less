@@ -140,9 +140,36 @@
       bottom: 0;
       left: 0;
       right: 0;
+      .font-size(12);
+
+      li {
+        float: left;
+        list-style: none;
+        margin-right: 10px;
+        font-weight: bold;
+        background: transparent url('/images/legend-icons.png') no-repeat 0 2px;
+        padding-left: 20px;
+
+        &.mines {
+          background-position-y:-51px;
+        }
+
+        &.pipes {
+          background-position-y:-102px;
+        }
+
+        &.permits {
+          background-position-y:-150px;
+        }
+
+        &.leases {
+          background-position-y:-200px;
+        }
+      }
 
       .credits-and-sources {
         position: absolute;
+        top:12px;
         right: 20px;
       }
     }
