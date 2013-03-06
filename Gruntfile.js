@@ -240,6 +240,7 @@ module.exports = function(grunt) {
           src: [
             'index.html',
             '*.{ico,txt}',
+            'images/*.gif',
             '.htaccess'
           ]
         }]
@@ -249,33 +250,34 @@ module.exports = function(grunt) {
     cdn: {
       dist: {
         src: ['<%= project.dist %>/index.html'],
-        cdn: 'http://newproject-assets.theglobalmail.org'
+        cdn: 'http://rockart-assets.theglobalmail.org'
       },
 
       staging: {
         src: ['<%= cdn.dist.src %>'],
-        cdn: 'http://newproject-staging-assets.theglobalmail.org'
+        cdn: 'http://rockart-staging-assets.theglobalmail.org'
       }
     },
 
     cloudfiles: {
       staging: {
-        'user': 'theglobalmail',
-        'key': process.env.RACKSPACE_API_KEY,
-        'upload': [{
-          'container': 'newproject-staging-assets',
-          'src': '<%= project.dist %>/**/*',
-          'dist': ''
+        user: 'theglobalmail',
+        key: process.env.RACKSPACE_API_KEY,
+        upload: [{
+          container: 'rockart-staging',
+          src: '<%= project.dist %>/**/*',
+          dist: '',
+          stripcomponents: 1
         }]
       },
 
       dist: {
-        'user': 'theglobalmail',
-        'key': process.env.RACKSPACE_API_KEY,
-        'upload': [{
-          'container': 'newproject-assets',
-          'src': '<%= project.dist %>/**/*',
-          'dist': ''
+        user: 'theglobalmail',
+        key: process.env.RACKSPACE_API_KEY,
+        upload: [{
+          container: 'rockart',
+          src: '<%= project.dist %>/**/*',
+          dist: ''
         }]
       }
     }
