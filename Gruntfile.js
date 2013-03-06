@@ -240,6 +240,7 @@ module.exports = function(grunt) {
           src: [
             'index.html',
             '*.{ico,txt}',
+            'images/*.gif',
             '.htaccess'
           ]
         }]
@@ -263,9 +264,10 @@ module.exports = function(grunt) {
         user: 'theglobalmail',
         key: process.env.RACKSPACE_API_KEY,
         upload: [{
-          container: 'rockart-staging-assets',
+          container: 'rockart-staging',
           src: '<%= project.dist %>/**/*',
-          dist: ''
+          dist: '',
+          stripcomponents: 1
         }]
       },
 
@@ -273,7 +275,7 @@ module.exports = function(grunt) {
         user: 'theglobalmail',
         key: process.env.RACKSPACE_API_KEY,
         upload: [{
-          container: 'rockart-assets',
+          container: 'rockart',
           src: '<%= project.dist %>/**/*',
           dist: ''
         }]
