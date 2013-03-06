@@ -6,7 +6,7 @@
 
   <title>Rock Art</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.5">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,800,700" rel="stylesheet">
@@ -40,10 +40,6 @@
     <a href="http://www.theglobalmail.org/" class="brand brand-center" title="Go to The Global Mail">The Global Mail</a>
 
     <div class="special-feature-misc">
-      <div class="special-feature-links">
-        <a href="#about-modal" data-toggle="modal" data-bypass>About</a>
-      </div>
-
       <div class="share-button twitter">
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="TheGlobalMail" data-hashtags="auspol">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -59,30 +55,22 @@
     <div id="slider-container">
       <div class="slider-side left">
         <div class="slider-side-inner">
-          <div class="container">
-            <div class="row">
-              <div class="span12 slider-content">
-                <h2>Rock art regions of Australia</h2>
-                <img src="/images/map-rock-art.png" alt="A map of Australian Rock art regions" class="map">
-              </div>
-            </div>
+          <div class="slider-content">
+            <h2>Rock art regions of Australia</h2>
+            <img src="/images/map-rock-art.png" alt="A map of Australian Rock art regions" class="map">
           </div>
         </div>
       </div>
 
       <div class="slider-side right">
         <div class="slider-side-inner">
-          <div class="container">
-            <div class="row">
-              <div class="span12 slider-content">
-                <div class="mines-overlay">
-                  <h2>Mines &amp; mining licenses</h2>
-                  <h3>Only includes mainland Australia, not offshore mines and leases.</h3>
-                </div>
-
-                <img src="/images/map-mines.png" alt="A map of mainland-Australia mining licenses" class="map">
-              </div>
+          <div class="slider-content">
+            <div class="mines-overlay">
+              <h2>Mines &amp; mining licenses</h2>
+              <h3>Only includes mainland Australia, not offshore mines and leases.</h3>
             </div>
+
+            <img src="/images/map-mines.png" alt="A map of mainland-Australia mining licenses" class="map">
           </div>
         </div>
       </div>
@@ -90,7 +78,7 @@
       <div class="slider-handle"></div>
 
       <div class="slider-overlay">
-        <div class="container">
+        <div class="slider-content">
           <div class="rock-art-regions-title">
             <h2 class="rock-art-regions-heading">Rock art at risk</h2>
             <h3 class="rock-art-regions-intro">Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </h3>
@@ -125,6 +113,7 @@
   <script src="/components/bootstrap/js/bootstrap-modal.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/slider.js"></script>
+  <script src="/js/slider-content.js"></script>
   <script src="/js/main.js"></script>
   <!-- endbuild -->
 </body>
