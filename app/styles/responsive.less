@@ -22,34 +22,52 @@
 
 @media only screen and (max-width: 715px) {
   #slider-container .slider-side {
-    &.left h2, &.right .mines-overlay {
+    &.left .rock-art-overlay, &.right .mines-overlay {
       top: 1%;
+      width: 140px;
+      h2 {
+        .font-size(16);
+        margin-bottom: 0px;
+      }
+      h3 {
+        margin-top: 4px;
+        font-weight: normal;
+      }
     }
 
-    &.left h2 {
+    &.left .rock-art-overlay {
       left: 1%;
     }
 
     &.right .mines-overlay {
       right: 3%;
-      width: 230px;
       text-align: right;
     }
 
-    .slider-content {
-      padding-top: 90px;
-    }
+
   }
 
   #slider-container .slider-overlay .rock-art-regions-title {
     padding-top: 176px;
 
     .rock-art-regions-heading {
-      .font-size(25);
+      .font-size(28);
     }
 
     .rock-art-regions-intro {
       .font-size(14);
+    }
+  }
+
+  #slider-container .slider-overlay .map-legend {
+    height: 80px;
+
+    .credits-and-sources {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      clear: left;
+      float: left;
     }
   }
 
@@ -84,6 +102,9 @@
     width: 190px;
     background-position: left center;
   }
+  .slider-content {
+      padding-top: 90px;
+    }
 }
 
 @media only screen and (max-width: 440px), (max-height: 660px) {
@@ -95,11 +116,13 @@
     padding-top: 260px;
 
     .rock-art-regions-heading {
-      .font-size(22);
+      .font-size(24);
     }
 
     .rock-art-regions-intro {
-      .font-size(14);
+      .font-size(12);
+      margin: 0 5%;
     }
   }
+
 }
