@@ -6,6 +6,16 @@
   }
 }
 
+.loading-overlay {
+  position: fixed;
+  top: 46px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 20;
+}
+
 #slider-container {
   height: 886px;
   width: 100%;
@@ -27,7 +37,7 @@
     height: @radius;
     width: @radius;
     margin: (@radius / -2) 0 0 (@radius / -2);
-    z-index: 40;
+    z-index: 10;
     cursor: col-resize;
     background-color: orange;
     .border-radius(999px);
@@ -155,6 +165,7 @@
     left: 0;
     right: 0;
     .font-size(12);
+    z-index: 100;
 
     li {
       float: left;
