@@ -22,7 +22,7 @@
 
   .slider-handle {
     position: absolute;
-    top: 40%;
+    top: 37%;
     @radius: 49px;
     height: @radius;
     width: @radius;
@@ -148,6 +148,68 @@
     .credits-and-sources {
       position: absolute;
       right: 20px;
+      .font-size(12);
+
+      li {
+        float: left;
+        list-style: none;
+        margin-right: 10px;
+        font-weight: bold;
+        background: transparent url('/images/legend-icons.png') no-repeat 0 2px;
+        padding-left: 20px;
+
+        &.mines {
+          background-position-y:-51px;
+        }
+
+        &.pipes {
+          background-position-y:-102px;
+        }
+
+        &.permits {
+          background-position-y:-150px;
+        }
+
+        &.leases {
+          background-position-y:-200px;
+        }
+      }
     }
+  }
+}
+
+.modal {
+  padding: 20px;
+
+  .close {
+    .font-size(40);
+  }
+
+  .modal-body {
+    padding-top: 0;
+  }
+
+  p, li {
+    .font-size(12);
+    line-height: 1.5;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  li > ul {
+    margin-bottom: 20px;
+
+    & > li {
+      .font-size(11);
+    }
+  }
+
+  li > h5 {
+    .font-size(11);
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: italic;
   }
 }
