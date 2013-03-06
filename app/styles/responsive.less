@@ -1,8 +1,7 @@
 @media only screen and (max-width: 1100px), (max-height: 860px) {
   #slider-container .slider-overlay .rock-art-regions-title {
-    width: 310px;
+    width: 50%;
     padding-top: 26px;
-    left: 10%;
 
     .rock-art-regions-heading {
       .font-size(40);
@@ -14,9 +13,17 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 770px) {
   .navbar.special-feature .special-feature-misc {
     display: none;
+  }
+
+  .slider-content {
+    padding-top: 20px;
+  }
+
+  #slider-container .slider-overlay .rock-art-regions-title {
+    padding-top: 80px;
   }
 }
 
@@ -46,7 +53,7 @@
   }
 
   #slider-container .slider-overlay .rock-art-regions-title {
-    padding-top: 176px;
+    padding-top: 170px;
 
     .rock-art-regions-heading {
       .font-size(28);
@@ -58,32 +65,37 @@
   }
 
   #slider-container .slider-overlay .map-legend {
-    height: 80px;
+    height: 45px;
 
-    .credits-and-sources {
-      position: relative;
-      width: 100%;
-      text-align: center;
-      clear: left;
-      float: left;
+    ul {
+      width: auto;
     }
+
+    // .credits-and-sources {
+    //   position: relative;
+    //   width: 100%;
+    //   text-align: center;
+    //   clear: left;
+    //   float: left;
+    //   right: 0;
+    // }
   }
 
   #about-modal {
-    width: 300px;
-    margin-left: -150px;
+    width: 90%;
+    margin-left: -47%;
+    padding: 2%;
 
     .modal-header {
       h3 {
         .font-size(20);
       }
-
-      .close {
-        .font-size(24);
-      }
     }
 
     .modal-body {
+      height: 220px;
+      overflow-x: hidden;
+
       h4 {
         .font-size(16);
       }
@@ -95,31 +107,28 @@
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 530px) {
   .navbar.special-feature .brand-center {
     width: 190px;
     background-position: left center;
   }
   .slider-content {
-      padding-top: 90px;
+      padding-top: 70px;
     }
 }
 
 @media only screen and (max-width: 440px), (max-height: 660px) {
   #slider-container .slider-overlay .rock-art-regions-title {
-    width: 270px;
-    left: 50%;
-    text-align: center;
-    margin-left: -135px;
-    padding-top: 260px;
+    width: 80%;
+    left: 5%;
+    padding-top: 200px;
 
     .rock-art-regions-heading {
-      .font-size(24);
+      .font-size(28);
     }
 
     .rock-art-regions-intro {
-      .font-size(12);
-      margin: 0 5%;
+      .font-size(14);
     }
   }
 
