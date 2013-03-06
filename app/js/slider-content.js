@@ -26,7 +26,7 @@
 
       var width  = $(window).width();
       var height = $(window).height() - this.bannerHeight();
-      height = Math.max(height, 530);
+      height = Math.max(height, 540);
 
       this.$inners.width(width);
       this.$el.width(width);
