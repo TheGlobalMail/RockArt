@@ -3,6 +3,11 @@
 
   RockArt.Views.Slider = Backbone.View.extend({
 
+    sizes: {
+      min: { height: 300,  width: 400  },
+      max: { height: 1200, width: 1600 }
+    },
+
     events: {
       'mousedown .slider-handle': 'onMouseDown',
       'mouseup': 'onMouseUp',
@@ -14,23 +19,11 @@
       _.bindAll(this);
 
       this.$left   = this.$('.slider-side.left');
-      this.$right  = this.$('.slider-side.right');
       this.$handle = this.$('.slider-handle');
       this.$inners = this.$('.slider-side-inner');
-
-      $(window).on('resize', this.updateSliderInnerWidths);
+      this.$maps   = this.$('.map');
 
       this.refresh();
-    },
-
-    updateHandlePosition: function() {
-      var offsetPercentage = (this.$left.width() / this.$el.width()) * 100;
-      this.$handle.css('left', offsetPercentage + '%');
-    },
-
-    updateSliderInnerWidths: function() {
-      var width = $(document).width();
-      this.$inners.width(width);
     },
 
     onMouseDown: function() {
@@ -71,6 +64,11 @@
       this.$el.off('touchmove.slider-move');
     },
 
+    updateHandlePosition: function() {
+      var offsetPercentage = (this.$left.width() / this.$el.width()) * 100;
+      this.$handle.css('left', offsetPercentage + '%');
+    },
+
     _disableSelection: function() {
       this.$el.addClass('unselectable')
     },
@@ -87,7 +85,6 @@
 
     refresh: function() {
       this.updateHandlePosition();
-      this.updateSliderInnerWidths();
     }
 
   });

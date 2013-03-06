@@ -1,129 +1,105 @@
+@media only screen and (max-width: 1100px), (max-height: 860px) {
+  #slider-container .slider-overlay .rock-art-regions-title {
+    width: 310px;
+    padding-top: 26px;
+    left: 10%;
 
-// Large tablet
-@media only screen and (max-width: 1050px) {
-
-}
-
-
-// Smaller tablet
-@media only screen and (max-width: 950px) {
-  #slider-container {
-    .slider-side {
-      img.map {
-          margin-top: 70px;
-        }
-      &.left {
-        .rock-art-overlay {
-          top:20px;
-          width: 240px;
-          margin-left: 0;
-          h2 {
-
-            }
-        }
-      }
-      &.right {
-        .mines-overlay {
-          top:20px;
-          width: 240px;
-          text-align: right;
-          h2 {
-            margin-right: 0;
-            margin-bottom: 5px;
-          }
-          h3 {
-            margin-top: 0;
-          }
-        }
-      }
+    .rock-art-regions-heading {
+      .font-size(40);
     }
 
-    .slider-overlay {
-      .rock-art-regions-title {
-        // left:20px;
-        top: 80%;
-      }
+    .rock-art-regions-intro {
+      .font-size(16);
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar.special-feature .special-feature-misc {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  #slider-container .slider-side {
+    &.left h2, &.right .mines-overlay {
+      top: 1%;
+    }
+
+    &.left h2 {
+      left: 1%;
+    }
+
+    &.right .mines-overlay {
+      right: 3%;
+      width: 230px;
+      text-align: right;
+    }
+
+    .slider-content {
+      padding-top: 90px;
     }
   }
 
+  #slider-container .slider-overlay .rock-art-regions-title {
+    padding-top: 176px;
+
+    .rock-art-regions-heading {
+      .font-size(25);
+    }
+
+    .rock-art-regions-intro {
+      .font-size(14);
+    }
+  }
+
+  #about-modal {
+    width: 300px;
+    margin-left: -150px;
+
+    .modal-header {
+      h3 {
+        .font-size(20);
+      }
+
+      .close {
+        .font-size(24);
+      }
+    }
+
+    .modal-body {
+      h4 {
+        .font-size(16);
+      }
+
+      p {
+        .font-size(12);
+      }
+    }
+  }
 }
 
-// Small tablet
-@media only screen and (max-width: 910px) {
-    .navbar {
-        &.special-feature {
-          padding: 8px 0;
-          .brand {
-            width:195px;
-            background-position: 0 center;
-          }
-        }
-    }
-    #slider-container {
-      .slider-overlay {
-        .rock-art-regions-title {
-            h2.rock-art-regions-heading {
-              .font-size(50);
-            }
-            h3.rock-art-regions-intro {
-              .font-size(16);
-            }
-          }
-        }
-    }
+@media only screen and (max-width: 430px) {
+  .navbar.special-feature .brand-center {
+    width: 190px;
+    background-position: left center;
+  }
 }
 
+@media only screen and (max-width: 440px), (max-height: 660px) {
+  #slider-container .slider-overlay .rock-art-regions-title {
+    width: 270px;
+    left: 50%;
+    text-align: center;
+    margin-left: -135px;
+    padding-top: 260px;
 
-// Phones
-@media only screen and (max-width: 710px) {
-    .navbar {
-      &.special-feature {
-        padding: 2px 0;
-      }
-      .special-feature-misc {
-          display: none;
-      }
+    .rock-art-regions-heading {
+      .font-size(22);
     }
-    #slider-container {
 
-      .slider-side {
-
-        &.left {
-          .rock-art-overlay {
-            width: 140px;
-                margin-left: 0;
-                left: 20px;
-            h2 {
-                .font-size(18);
-
-              }
-            }
-        }
-        &.right {
-          .mines-overlay {
-            width: 140px;
-            right: 20px;
-            h2 {
-              .font-size(18);
-              margin-right: 0;
-            }
-          }
-        }
-      }
-
-      .slider-overlay {
-        .rock-art-regions-title {
-          width: auto;
-          left: 0;
-          text-align: center;
-            h2.rock-art-regions-heading {
-              .font-size(34);
-            }
-            h3.rock-art-regions-intro {
-              padding: 0 5%;
-
-            }
-          }
-        }
+    .rock-art-regions-intro {
+      .font-size(14);
     }
+  }
 }
