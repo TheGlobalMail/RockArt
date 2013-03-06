@@ -81,7 +81,7 @@
 
     .rock-art-overlay {
       position: absolute;
-      width: 145px;
+      width: 155px;
       top: 5%;
       left: 2%;
       color: white;
@@ -95,6 +95,7 @@
     h3 {
       .font-size(12);
       line-height: 1.2;
+      width: 140px;
     }
   }
 
@@ -250,5 +251,31 @@
     text-transform: uppercase;
     font-weight: normal;
     font-style: italic;
+  }
+}
+
+.lt-ie9 {
+  h1,h2,h3,h4,h5,p,li, strong {
+      font-family: arial, helvetica, sans-serif;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+  #slider-container {
+
+
+
+    .slider-handle {
+      background: url('/images/slider.png') center center no-repeat;
+    }
+    .slider-overlay .rock-art-regions-title {
+      padding-top: 46px;
+      .rock-art-regions-heading {
+        .font-size(40);
+        font-family: arial;
+        font-weight: bold;
+      }
+    }
   }
 }
