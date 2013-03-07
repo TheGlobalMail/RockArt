@@ -277,7 +277,8 @@ module.exports = function(grunt) {
         upload: [{
           container: 'rockart',
           src: '<%= project.dist %>/**/*',
-          dist: ''
+          dist: '',
+          stripcomponents: 1
         }]
       }
     }
