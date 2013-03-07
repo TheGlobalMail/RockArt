@@ -1,12 +1,9 @@
 (function(RockArt) {
   'use strict';
 
-  RockArt.LoadingOverlay = function(body) {
+  RockArt.LoadingOverlay = function(el) {
     _.bindAll(this);
-    this.$body = $(body);
-    this.$el = $('<div class="loading-overlay"/>').hide();
-
-    this.$body.prepend(this.$el);
+    this.$el = el;
   };
 
   RockArt.LoadingOverlay.prototype = {
@@ -27,6 +24,6 @@
 
   };
 
-  var lo = new RockArt.LoadingOverlay(document.body);
-  lo.show().listen();
+  var lo = new RockArt.LoadingOverlay($('.loading-overlay:first'));
+  lo.listen();
 }(RockArt));
