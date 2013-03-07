@@ -26,9 +26,11 @@
 
       var width  = $(window).width();
       var height = $(window).height() - this.bannerHeight();
-      height = Math.max(height, 540);
+      height = Math.max(height, 570);
+      width = Math.max(width, 319);
 
       this.$inners.width(width);
+      this.$inners.height(height);
       this.$el.width(width);
       this.$el.height(height);
 
@@ -39,7 +41,7 @@
         this.$content.width('');
       }
 
-      this.$titleOverlay.css('top', (this.$content.height() - 170) + 'px');
+      this.$titleOverlay.css('top', (this.$maps.height() - 170) + 'px');
     }
 
   });
