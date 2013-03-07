@@ -65,8 +65,11 @@
     },
 
     updateHandlePosition: function() {
-      var offsetPercentage = (this.$left.width() / this.$el.width()) * 100;
-      this.$handle.css('left', offsetPercentage + '%');
+      if (Modernizr.csstransforms3d) {
+        this.$handle.css('transform',  'translateX(' + this.$left.width() + 'px)');
+      } else {
+        this.$handle.css('left', this.$left.width() + 'px');
+      }
     },
 
     _disableSelection: function() {
@@ -78,8 +81,7 @@
     },
 
     setDividerPosition: function(x) {
-      var offsetPercentage = (x / this.$el.width()) * 100;
-      this.$left.width(offsetPercentage + '%');
+      this.$left.width(x);
       this.refresh();
     },
 
