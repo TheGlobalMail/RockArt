@@ -11,9 +11,9 @@ env = process.argv[2];
 apiKey = process.argv[3];
 
 if (env === 'production'){
-  container = 'partylines';
+  container = 'rockart';
 }else if (env === 'staging'){
-  container = 'staging-partylines';
+  container = 'rockart-staging';
 }else{
   console.error('unknown environment: ' + env + '. Should be staging or production');
   process.exit(1);
